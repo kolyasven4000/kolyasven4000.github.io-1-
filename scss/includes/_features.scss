@@ -73,50 +73,41 @@
   }
  }   
     
-   @media(min-width: 960px){
-    .features{
+@media(min-width: 960px){
+  .features{
       text-align: center;
       width:100%;
       margin-top: -100px;
-    }
-    .iphone-case{
+  }
+  .iphone-case{
       display:none;
-    }
-    .features-item{
-      
+  }
+  .features-item{
       float:left;
       width:33.3%;
-      
-
-    }
-    .iphone-case-desktop{
-      
+  }
+  .iphone-case-desktop{   
       display:block;
       position:relative;
-      margin-bottom: 55px;
-     
-
-      
+      margin-bottom: 55px;  
     &::after{
-content: "";
-position: absolute;
-top: 100%;
-left:17%;
-right: 17%;
-//width: 260px;
-box-shadow:0px 0px 1.6px 0.5px rgba(0,0,0,0.3);
-}
-      
-  
+        content: "";
+        position: absolute;
+        top: 100%;
+        left:17%;
+        right: 17%;
+        //width: 260px;
+        box-shadow:0px 0px 1.6px 0.5px rgba(0,0,0,0.3);
     }
-.caption{
-    padding:0 35px;
-}
+  }
+    .caption{
+        padding:0 35px;
+    }
     .features-item > p{
       padding:0 35px;
       font-size: 18px;
     }
-   }
+}
 
 
 

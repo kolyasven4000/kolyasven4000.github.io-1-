@@ -9,7 +9,7 @@ var gulp = require('gulp'),
 //server connect
 gulp.task('connect', function() {
   connect.server({
-    root: 'app',
+    
     livereload: true
   });
 });
@@ -26,14 +26,14 @@ gulp.task('css', function() {
 });
 //html
 gulp.task('html',function() {
-	gulp.src('app/index.html')
+	gulp.src('index.html')
 	.pipe(connect.reload());
 })
 
 //watch
 gulp.task('watch', function () {
     	gulp.watch('scss/**/*.scss', ['css'])
-    	gulp.watch('app/index.html', ['html'])
+    	gulp.watch('index.html', ['html'])
 
 
 })
