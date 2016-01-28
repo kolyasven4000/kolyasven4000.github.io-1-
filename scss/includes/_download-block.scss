@@ -24,20 +24,18 @@
 	}
 }
 .download-block__icons{ 
-	margin: 20px 0;
-	a{
-		text-decoration: none;
-	}
+	margin: 20px 0;	
 	img{
 			vertical-align: bottom;
-
 	}
-// margin-left only 2, 3 icons
-	a:not(:first-child){
+}
+.download-block__icon{
+	text-decoration: none;
+	// margin-left only 2, 3 icons
+	&:not(:first-child){
 		 margin-left:35px;
 	}
 }
-
 .download-block__information{
 		color: $header-font-color;
 		line-height: $download-block-line-height;
