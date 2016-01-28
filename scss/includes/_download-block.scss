@@ -25,8 +25,12 @@
 }
 .download-block__icons{ 
 	margin: 20px 0;
+	a{
+		text-decoration: none;
+	}
 	img{
 			vertical-align: bottom;
+
 	}
 // margin-left only 2, 3 icons
 	a:not(:first-child){
