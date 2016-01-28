@@ -1,0 +1,72 @@
+.footer{
+	display:none;
+	padding: 40px 0 ;
+	@media(min-width: 700px){
+	display: block;
+}
+@media(min-width: 960px){
+padding: 70px 0;
+}
+}
+.footer__logo{
+	width: 25%;
+	text-align: left;
+	float: left;
+}
+.footer__social{
+float: left;
+width: 50%;
+text-align:center;
+}
+.social-btn{
+display: inline-block;
+width: 45px;
+height: 45px;
+margin-right: 10px;
+border: 3px solid $light-gray-table;
+border-radius: 50%;
+background-size: 20px;
+background-position: center;
+background-repeat: no-repeat;
+&:hover{
+	border: 3px solid $dark-blue;
+
+	
+}
+&:active{
+  opacity: 0.3;
+  transform:rotateY(-180deg);
+  //background-color: transparentize($dark-bg, 0.8);
+}
+}
+
+.social-btn--twitter{
+background-image: url(../img/twitter.svg);
+}
+.social-btn--facebook{
+background-image: url(../img/facebook.svg);
+}
+
+.social-btn--youtube{
+background-image: url(../img/youtube.svg);
+}
+.copyright{
+	float: right;
+	width: 25%;
+	text-align:right;
+    font-weight: 800;
+}
+.copyright__text{
+	display: inline-block;
+	vertical-align: middle;
+}
+.copyright__link{
+@extend .copyright__text;
+width: 55px;
+height: 55px;
+background-image:  url(../img/glukhanko.svg);
+background-position: center;
+background-repeat: no-repeat;
+	
+	
+}

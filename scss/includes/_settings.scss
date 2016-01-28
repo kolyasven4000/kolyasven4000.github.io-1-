@@ -1,0 +1,128 @@
+
+
+//BASE-----------------------
+//colors
+$white: #fff;
+$black: #000;
+$dark-blue:#283645; //font
+$light-gray:#f2f2f2;
+$pink: #d22856;
+
+//Typography 
+$font-family: 'Open Sans', sans-serif;
+$font-size: 14px;
+$line-height: 30px;
+
+$font-size-h3: 18px;
+$line-height-h3: 24px; 
+
+$font-size-h2: 24px;
+$line-height-h2: 28px; 
+
+$font-weight: 400;
+$font-weight-light: 300;
+$font-weight-bold: 700;
+
+$font-color: $dark-blue;
+
+
+
+//BASE end -----------------------
+
+
+//header-----------------------
+//Typography 
+
+$header-font-color: $white;
+$header-font-size-h2: $font-size-h2; //24
+$header-line-height-h2: $line-height-h2;
+
+$mobile-menu-link-font-size: 18px;
+$mobile-menu-link-font-weight: $font-weight-bold;
+$mobile-menu-link-line-height: 32px;
+
+//Colors -----------------------
+$header-top-menu-open-bg: $dark-blue;
+
+$mobile-menu-font-family: $font-family;
+$mobile-menu-bg: $header-top-menu-open-bg;
+$mobile-menu-link-color: $header-font-color;
+$mobile-menu-link-color-hover: $pink;
+
+//other-------------
+$header-top-menu-padding: 17px;
+
+$mobile-menu-padding: 15px;
+
+
+
+
+
+
+
+//end header-----------------------
+
+
+
+
+
+
+
+
+
+
+ $text-align-center: center;
+				  
+
+
+//color
+
+
+
+//download block-------------
+$download-block-line-height: 24px;
+$download-block-bg: #1d2631;
+
+$download-block-padding: 30px;
+
+
+
+//download-button--------------------
+$download-btn-font-size: 18px;
+$download-btn-font-family: $font-family;
+$download-btn-line-height: 20px;
+$download-btn-font-weight: $font-weight-bold;
+
+$download-btn-border: 3px solid $white;
+$download-btn-border-radius: 50px;
+
+$download-btn-color-bg: transparent;
+$download-btn-color-hover-bg: $white;
+
+$download-btn-color: $white;
+$download-btn-color-hover: $pink;
+
+$download-btn-padding: 20px 35px;
+//end download-button-------------------
+//end download block-------------
+
+
+//main-slogan--------------------
+$main-slogan-font-size-h2: $font-size-h2;
+$main-slogan-line-height-h2: $line-height-h2;
+
+
+
+
+
+
+//main-slogan end--------------------
+
+//table-------------
+$light-gray-table: #e5e5e5;
+$light-green-table: #3dc644;
+$orange-table: #f25b26;
+$pink-table: #D12755;
+
+
+//end table-------------

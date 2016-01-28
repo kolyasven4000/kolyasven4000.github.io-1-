@@ -1,0 +1,270 @@
+//header and  block with bg
+
+.header{
+  
+   background-image: url(../img/mobile/background-mobile.jpg);
+   background-repeat:no-repeat;
+   background-position: center top;
+   background-size: auto;
+  }
+
+  .header__top-menu{
+    position:relative;
+    padding: $header-top-menu-padding 0;
+    background: transparentize($black, 0.7);
+    }
+.mobile-menu{
+    display:none;
+    position:absolute;
+    top:100%; 
+    left:0;
+    right:0;
+    width: 100%; 
+    }
+
+.mobile-menu__list{
+    list-style: none;
+    margin:0;
+    padding:0;
+    }
+.mobile-menu__item{
+    background-color: $mobile-menu-bg;
+    }
+.mobile-menu__link{
+    display: block;
+    padding: $mobile-menu-padding 0;
+
+    font-family: $mobile-menu-font-family;
+    font-size: $mobile-menu-link-font-size;
+
+    font-weight: $font-weight-bold;
+    line-height: $mobile-menu-link-line-height; //32
+
+    text-decoration: none;
+    text-transform: uppercase;
+
+    color: $mobile-menu-link-color;
+
+    border-top: 1px solid lighten($dark-blue, 20%);
+    border-bottom: 1px solid $black;
+
+      &:active{
+          border: 1px solid transparent;
+      }
+      &:hover{
+          color: $mobile-menu-link-color-hover;
+      }
+    }
+
+.logo{
+    float:left;
+    font: 300 32px/16px 'Open Sans', Helvetica, Arial, sans-serif;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+  }
+.logo__link{
+    position: relative;
+    font-size: 0;
+    text-decoration: none;
+
+    &::after, &:hover::after, &:active::after{
+        position: absolute;
+        top:-20px;
+        left:0;
+    }
+
+    &::after{
+        content: url(../img/logo-mobile-white.svg);
+  }
+    &:hover::after{
+        content: url(../img/logo-mobile-pink.svg);
+  }
+    &:active::after{
+        content: url(../img/logo-mobile-gray.svg);
+  }
+}
+
+.menu-toggle{
+    float: right;
+    height:24px;
+    cursor: pointer;
+  }
+
+.icon {
+    position:relative;
+    margin-top: 10px;
+    cursor: inherit;
+
+  &, &::before, &::after {
+      display:block;
+      width: 50px;
+      height:4px;
+      background-color: $white;
+      transition-property: width;
+      transition-duration: 0.4s;
+      //transition:all .7s ease-out;
+  }
+
+  &::before, &::after {
+      position: absolute; 
+      content: ""; 
+  }
+  &::before {
+      top:-10px;
+  }
+  &::after{
+      top: 10px;
+  }
+  .menu-toggle:hover &, .menu-toggle:hover &::before , .menu-toggle:hover &::after{
+      background-color: $pink;
+  }
+  .menu-toggle:active &, .menu-toggle:active &::before , .menu-toggle:active &::after{
+      background-color: transparentize($pink, .4);
+  }
+}
+
+//cross
+.menu-toggle--active .icon, .menu-toggle--active:hover .icon {
+    width:25px;
+    background-color: transparent;
+    &::before, &::after{
+        top:0;
+        right:-3px;
+        width:30px;
+    }
+    &::before{
+        transform: rotateZ(135deg);
+    }
+    &::after{
+        transform: rotateZ(-135deg);
+    }
+  }
+
+
+
+.header__content{
+    height:375px;
+
+  @media(max-width: 700px) {
+  background-image: url(../img/mobile/iphone-hand-1.png);
+  background-repeat:no-repeat;
+  background-position: center bottom;
+}
+}
+.header__title{
+  //font-weight: $font-weight;
+	color: $white;
+  margin-top:25px;
+}
+
+//header and  block with bg end
+
+@media (min-width: 700px) {
+  .header{
+    &{
+       background-image:  url(../img/tablet/iphone-tablet-1x.png), url(../img/tablet/bg-tablet-1x.jpg);
+        background-position: bottom right, center ;
+       max-height:730px;
+    }
+    .container--to-left{
+        float:left;
+        width: 40%;
+        min-width: 300px;
+    }
+  }
+  .header__top-menu{
+      padding:  ($header-top-menu-padding +23px) 0; //40px
+  }
+  .logo__link{
+    &{
+        top: -15px;
+    }
+    &::after{
+        content: url(../img/logo-tablet-white.svg);
+    }
+    &:hover::after{
+        content: url(../img/logo-tablet-pink.svg);
+    }
+    &:active::after{
+        content: url(../img/logo-tablet-gray.svg);
+    }
+  }
+
+  .header__content{
+      height: auto;
+}
+  .header__title{
+      margin-top: 100px;
+      padding: 0 30px;
+}
+}
+//действие до 960px, иначе при открытом меню и разворачивании окна браузера закрасит хеадер
+@media(max-width: 960px){
+  .header__top-menu--open{
+      box-shadow: 0 -1px 0 0 $black inset;
+      background-color: $header-top-menu-open-bg;
+}
+  .mobile-menu--show{
+      display:block;
+}
+}
+
+@media (min-width: 960px) {
+  .header{
+      background-image:  url(../img/desktop/iphone-desktop.png), url(../img/desktop/bg-full.jpg);
+      background-position: 65% bottom, bottom center ;
+      background-size: 1050px, cover;
+      max-height:850px;
+  }
+
+  .mobile-menu{
+      display:block;
+      position: static;
+      float: right;
+      width: auto;
+    }
+  .mobile-menu__item{
+      display: inline-block;
+      background-color: transparent;
+      margin-left: 60px;
+    }
+  .mobile-menu__link{
+      padding:0;
+      padding-bottom: 4px; //отступ до подчеркивания
+
+      font-family: $mobile-menu-font-family;
+      font-size: $mobile-menu-link-font-size;
+      font-weight: $font-weight;
+      line-height: $mobile-menu-link-line-height - 12px; //2
+
+      border: none; 
+      text-transform: none;
+      
+      &:hover{
+        color: $white;
+        border-bottom: 2px solid $white;
+        transition-duration: 0s;
+      }
+      &:active{
+        opacity: 0.3;       
+        border: none;
+          }
+    }
+    .menu-toggle{
+      display: none;
+    }
+    .header__title{
+      margin-top: 115px;
+      font-size: 50px;
+      line-height: 56px;
+      padding: 0 40px;
+    }
+}
+
+
+
+
+
+
+
+

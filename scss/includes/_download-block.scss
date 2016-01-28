@@ -1,0 +1,67 @@
+.download-block{
+	background: $download-block-bg;
+	padding: $download-block-padding 0;
+}
+.download-block__btn{
+	padding: $download-btn-padding;
+
+	font-family: $download-btn-font-family;
+	font-size: $download-btn-font-size;
+	font-weight: $download-btn-font-weight;
+	line-height: $download-btn-line-height;
+
+	color: $download-btn-color;
+	background:$download-btn-color-bg;
+
+	border: $download-btn-border;
+	border-radius: $download-btn-border-radius;
+	&:hover{
+		background: $download-btn-color-hover-bg;
+		color: $download-btn-color-hover;
+	}
+	&:active{
+		color:transparentize($pink, 0.5);
+	}
+}
+.download-block__icons{ 
+	margin: 20px 0;
+	img{
+			vertical-align: bottom;
+	}
+// margin-left only 2, 3 icons
+	a:not(:first-child){
+		 margin-left:35px;
+	}
+}
+
+.download-block__information{
+		color: $header-font-color;
+		line-height: $download-block-line-height;
+		font-weight: $font-weight-light;
+	}
+
+	@media(min-width: 700px){
+		.download-block{
+			background: transparent;
+			padding-bottom: 100px;
+		}
+
+		.download-block__icons{
+		margin: 40px 0;
+		}
+		.download-block__information{
+			font-size: $font-size + 4;// 18
+		}
+	}
+
+	@media(min-width: 960px){
+		.download-block{
+		padding: $download-block-padding*2 0 $download-block-padding*4;
+		}
+		.download-block__icons{
+			margin: 70px 0 50px;
+		}
+		.download-block__btn{
+			font-size: $download-btn-font-size +3px; //21	
+		}
+	}
