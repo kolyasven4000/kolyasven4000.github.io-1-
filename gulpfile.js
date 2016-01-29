@@ -4,7 +4,7 @@ var gulp = require('gulp'),
 	autoprefixer = require('gulp-autoprefixer'),
 	connect = require('gulp-connect'),
 	livereload = require('gulp-livereload'),
-	sass = require('gulp-sass');
+	sass = require('gulp-sass'),
   minifyCss = require('gulp-minify-css');
 //server connect
 gulp.task('connect', function() {

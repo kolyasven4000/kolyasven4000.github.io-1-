@@ -5,13 +5,14 @@ body{
   text-align:center;
   width:100%;
 
-   font: {
+  font: {
     family: $font-family;
     size: $font-size;
-    //color: $dark-blue;
     weight: $font-weight;
   }
+
   line-height: $line-height;
+
   h2{
     font-size:$font-size-h2; //24
     font-weight:$font-weight-light;
@@ -19,16 +20,17 @@ body{
     color: $dark-blue;
     margin:0;
     
-    @media(min-width: 700px){
+    @media(min-width: 700px) {
       font-size:$font-size-h2 + 16;//40px
-      //font-weight: $font-weight-light; //300
       line-height: $line-height + 26; //44px
     }
-    @media(min-width: 960px){
+
+    @media(min-width: 960px) {
       font-size:$font-size-h2 + 26;//50px
       line-height: $line-height + 26; //54px
     }
   }
+
   h3{
       margin:0;
       font-size:$font-size-h3;//18
@@ -46,25 +48,28 @@ body{
       font-size: $font-size; //14px
       line-height: $line-height; //30px
     }
-    a{
+  a{
       transition: all 0.4s ease 0s;
     }
 }
+
   svg, img{
     vertical-align: top;
   }
 .container{
-  //outline:2px solid red;
   display: block;
   margin:0 auto;
   padding: 0 20px;
+  
   @media(min-width: 700px){
     padding:0 40px;
   }
+
   @media(min-width: 960px){
     max-width: 940px;
   }
 }
+
 .clearfix::after{
   display: table;
   content: "";
@@ -75,7 +80,7 @@ body{
  input[type="radio"]{
     display:none;
   }
-  //max-width:700px;
+ 
 
 
  
